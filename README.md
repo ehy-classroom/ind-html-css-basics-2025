@@ -1,1 +1,2 @@
-# ind-html-css-basics-2025
+# HTML/CSS Basics 2025
+Für Kurse bei indisoft
