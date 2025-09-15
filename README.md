@@ -1,5 +1,5 @@
-# HTML/CSS Basics 2025
-Für Kurse bei indisoft
+# HTML/CSS Grundlagen 2025
+Für Kurse in der Weiterbilung und Umschulung
 
 
 Version: 1.0.0
