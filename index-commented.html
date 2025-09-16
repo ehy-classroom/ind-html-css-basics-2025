@@ -21,10 +21,21 @@ Das Attribut lang="de" bedeutet: Die Sprache der Seite ist Deutsch.
     -->
     <head>
 
-        <!--Version: 1.0.0-->
+        <!--Version: 1.0.1-->
         <!--
-            <title> gibt der Webseite einen Namen, der im Browser-Tab angezeigt wird.
-            -->
+        <meta charset="UTF-8"> legt die Zeichencodierung fest. UTF-8 ist ein Standard,
+        der fast alle Zeichen der Welt darstellen kann (Umlaute, Sonderzeichen, etc.)
+        -->
+        <meta charset="UTF-8">
+        <!--
+        <meta name="viewport"> steuert die Darstellung auf mobilen Geräten.
+        "width=device-width" sorgt dafür, dass die Seite die Bildschirmbreite nutzt.
+        "initial-scale=1.0" verhindert, dass mobile Browser die Seite verkleinern.
+        -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--
+        <title> gibt der Webseite einen Namen, der im Browser-Tab angezeigt wird.
+        -->
         <title>HTML/CSS Grundlagen 2025</title>
     </head>
 
@@ -34,10 +45,44 @@ Das Attribut lang="de" bedeutet: Die Sprache der Seite ist Deutsch.
     -->
     <body>
         <!--
-        <h1> ist eine Überschrift der höchsten Ebene ("Heading 1").
-        Überschriften helfen, den Inhalt zu strukturieren.
+        <div> ist ein Container-Element ohne besondere Bedeutung. Es wird oft benutzt,
+        um Inhalte zu gruppieren und mit CSS zu gestalten.
+        Das "class" Attribut gibt dem Element einen Namen für CSS-Styling.
+        Das "role" Attribut hilft Screenreadern, die Funktion zu verstehen.
         -->
-        <h1>Hallo Welt!</h1>
+        <div class="header" role="header">
+            <!--
+            <h1> ist eine Überschrift der höchsten Ebene ("Heading 1").
+            Überschriften helfen, den Inhalt zu strukturieren.
+            -->
+            <h1>Hallo Welt!</h1>
+        </div>
+
+        <!--
+        Noch ein <div> Container, um den Hauptinhalt zu gruppieren.
+        "wrapper" ist ein häufig verwendeter CSS-Klassenname für Container.
+        -->
+        <div class="wrapper">
+            <!--
+            <p> steht für "Paragraph" (Absatz). Jeder <p>-Tag erzeugt einen Textblock
+            mit automatischen Abständen vor und nach dem Text.
+            -->
+            <p>
+                Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal
+                benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen.
+            </p>
+            <!--
+            Ein zweiter Absatz. Mehrere <p>-Elemente werden automatisch mit Abstand voneinander angezeigt.
+            -->
+            <p>
+                Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«. Sehr bekannt
+                ist
+                dieser: The quick brown fox jumps over the lazy old dog. Oft werden in Typoblindtexte auch fremdsprachige
+                Satzteile eingebaut (AVAIL® and Wefox™ are testing aussi la Kerning), um die Wirkung in anderen Sprachen zu
+                testen. In Lateinisch sieht zum Beispiel fast jede Schrift gut aus.
+            </p>
+        </div>
+
     </body>
 
 <!--

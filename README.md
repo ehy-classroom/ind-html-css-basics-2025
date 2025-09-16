@@ -3,7 +3,7 @@ Für Kurse in der Weiterbildung und Umschulung
 <a href="https://ehy-classroom.github.io/ind-html-css-basics-2025/" target="_blank">https://ehy-classroom.github.io/ind-html-css-basics-2025/</a>
 
 
-Version: 1.0.0
+Version: 1.0.1
 
 Autor: Enno Hyttrek, [ehy.training@gmail.com](mailto:ehy.training@gmail.com)
 
