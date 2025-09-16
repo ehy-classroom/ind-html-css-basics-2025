@@ -4,7 +4,7 @@ Für Kurse in der Weiterbildung und Umschulung
 
 
 
-Version: 1.0.2
+Version: 1.0.3
 
 Autor: Enno Hyttrek, <a href="mailto:ehy.training@gmail.com" target="_blank">ehy.training@gmail.com</a>
 
@@ -37,23 +37,53 @@ Im Beispiel ist `href` ein Attribut, das das Ziel des Links angibt.
 
 Die Datei `index.html` ist die Startseite einer Webseite. Wenn man einen Ordner im Browser aufruft, wird automatisch die `index.html` angezeigt. Sie ist der Einstiegspunkt für Besucher.
 
-## Beschreibung der Übungsdatei index.html (Version 1.0.2)
+## Beschreibung der Übungsdatei index.html (Version 1.0.3)
 
-In der Übungsdatei `index.html` wurde eine minimale HTML-Struktur erstellt:
+In der Übungsdatei `index.html` wurde eine HTML-Struktur mit semantischen Elementen erstellt:
 
-- Die Datei beginnt mit der Deklaration `<!DOCTYPE html>` für HTML5.
-- Das `<html>`-Element legt die Sprache auf Deutsch fest (`lang="de"`).
-- Im `<head>`-Bereich steht der Titel der Seite.
-- Im `<body>`-Bereich wird eine Überschrift angezeigt.
+### Grundstruktur (seit Version 1.0.1)
+- Die Datei beginnt mit der Deklaration `<!DOCTYPE html>` für HTML5
+- Das `<html>`-Element legt die Sprache auf Deutsch fest (`lang="de"`)
+- Meta-Tags für Zeichencodierung (`charset="UTF-8"`) und mobile Darstellung (`viewport`)
+- Titel der Seite im `<head>`-Bereich
 
-**Schritte dorthin:**
+### Semantische HTML5-Elemente (seit Version 1.0.2)
+HTML5 bietet semantische Elemente, die die Bedeutung und Struktur einer Webseite besser beschreiben:
+
+- **`<header>`** - Kopfbereich der Seite (statt eines einfachen `<div>`)
+- **`<main>`** - Der Hauptinhalt der Seite (sollte nur einmal pro Seite verwendet werden)
+- **`<section>`** - Thematisch zusammengehörige Inhaltsabschnitte
+- **`<aside>`** - Seiteninhalt oder zusätzliche Informationen
+- **`<footer>`** - Fußbereich der Seite
+
+### Bilder und Medien (seit Version 1.0.3)
+```html
+<figure>
+    <img src="pfad/zum/bild.jpg" alt="Beschreibung des Bildes">
+    <figcaption>Bildunterschrift</figcaption>
+</figure>
+```
+
+### Links mit neuen Tab (seit Version 1.0.3)
+```html
+<a href="https://example.com" target="_blank">Link öffnet in neuem Tab</a>
+```
+
+**Schritte zur Erstellung:**
 1. Neue Datei `index.html` anlegen
 2. Grundstruktur mit `<!DOCTYPE html>`, `<html>`, `<head>`, `<body>` schreiben
-3. Titel und Überschrift ergänzen
-4. Datei speichern und im Browser testen
+3. Meta-Tags für Zeichencodierung und mobile Darstellung hinzufügen
+4. Semantische Elemente statt einfacher `<div>`-Container verwenden
+5. Bilder mit `<figure>` und `<figcaption>` strukturieren
+6. Links mit passenden Attributen versehen
+7. Datei speichern und im Browser testen
 
-**Version 1.0.2** steht für die aktuelle Version der Datei mit erweiterten Inhalten.
+**Version 1.0.3** steht für die aktuelle Version der Datei mit semantischen HTML5-Elementen, Bildern und erweiterten Inhalten.
 
 ## Kommentar zur kommentierten Version
 
 Es gibt zusätzlich eine Datei `index-commented.html`, in der alle Elemente ausführlich kommentiert sind. Sie dient ausschließlich zur Erklärung des Codes und ist eine ganz normale HTML-Datei – sie kann nicht mehr als Startseite (index.html) funktionieren, weil es im Webverzeichnis immer nur eine Datei mit dem Namen `index.html` geben kann. Nur diese wird beim Aufruf des Verzeichnisses automatisch angezeigt. Varianten wie `index2.html` oder `index3.html`, die man manchmal sieht, sind grundsätzlich sinnlos, da sie keine besondere Bedeutung für den Webserver haben und nicht automatisch geladen werden.
+
+---
+
+**Anmerkung:** Diese README-Datei sowie Teile des Codes der Beispieldateien wurden mit KI-Unterstützung erstellt (GitHub Copilot, Modell Claude Sonnet 4).

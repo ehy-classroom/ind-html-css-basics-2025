@@ -21,7 +21,7 @@ Das Attribut lang="de" bedeutet: Die Sprache der Seite ist Deutsch.
     -->
     <head>
 
-        <!--Version: 1.0.2-->
+        <!--Version: 1.0.3-->
         <!--
         <meta charset="UTF-8"> legt die Zeichencodierung fest. UTF-8 ist ein Standard,
         der fast alle Zeichen der Welt darstellen kann (Umlaute, Sonderzeichen, etc.)
@@ -72,6 +72,25 @@ Das Attribut lang="de" bedeutet: Die Sprache der Seite ist Deutsch.
                 Die Überschriften-Hierarchie sollte logisch aufgebaut sein: h1, h2, h3, etc.
                 -->
                 <h2>Hauptinhalt der Seite</h2>
+
+                <!--
+                <figure> ist ein semantisches HTML5-Element für Inhalte wie Bilder, Diagramme oder Code-Beispiele,
+                die zusammen mit einer Bildunterschrift stehen. Es gruppiert Bild und Beschreibung.
+                -->
+                <figure>
+                    <!--
+                    <img> fügt ein Bild in die Webseite ein. Das "src" Attribut gibt den Pfad zum Bild an.
+                    "width" und "height" bestimmen die Größe (100% = volle Breite des Containers).
+                    "alt" ist der alternative Text für Screenreader und wenn das Bild nicht geladen werden kann.
+                    -->
+                    <img src="assets/img/berlin-77788_1920.jpg" width="100%" height="auto" alt="Eine Fotografie die einen Teil der Berliner Skyline am Alexanderplatz zeigt, vor allem den Fernsehturm und das Park Inn Hotel.">
+                    <!--
+                    <figcaption> ist die Bildunterschrift, die zum <figure> Element gehört.
+                    Sie erklärt oder beschreibt das Bild.
+                    -->
+                    <figcaption>Abbildung 1: Berliner Skyline am Alexanderplatz</figcaption>
+                </figure>
+
                 <!--
                 <section> ist ein semantisches HTML5-Element für thematisch zusammengehörige Inhalte.
                 Es strukturiert den Inhalt in logische Abschnitte.
@@ -87,20 +106,14 @@ Das Attribut lang="de" bedeutet: Die Sprache der Seite ist Deutsch.
                     mit automatischen Abständen vor und nach dem Text.
                     -->
                     <p>
-                        Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen.
-                        Manchmal
-                        benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen.
+                        <!--
+                        <a> erstellt einen Link (Hyperlink). Das "href" Attribut gibt das Ziel an.
+                        "target="_blank"" öffnet den Link in einem neuen Tab/Fenster.
+                        -->
+                        Dies ist ein Typoblindtext. <a href="https://www.google.com/" target="_blank">Und dies ist ein Link zur Google Suchseite</a>. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen.
                     </p>
                     <p>
-                        Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«. Sehr
-                        bekannt
-                        ist
-                        dieser: The quick brown fox jumps over the lazy old dog. Oft werden in Typoblindtexte auch
-                        fremdsprachige
-                        Satzteile eingebaut (AVAIL® and Wefox™ are testing aussi la Kerning), um die Wirkung in anderen
-                        Sprachen
-                        zu
-                        testen. In Lateinisch sieht zum Beispiel fast jede Schrift gut aus.
+                        Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«. Sehr bekannt ist dieser: The quick brown fox jumps over the lazy old dog. Oft werden in Typoblindtexte auch fremdsprachige Satzteile eingebaut (AVAIL® and Wefox™ are testing aussi la Kerning), um die Wirkung in anderen Sprachen zu testen. In Lateinisch sieht zum Beispiel fast jede Schrift gut aus.
                     </p>
                 </section>
 
@@ -111,20 +124,10 @@ Das Attribut lang="de" bedeutet: Die Sprache der Seite ist Deutsch.
                 <section>
                     <h3>Dies ist ein Abschnitt (engl: section)</h3>
                     <p>
-                        Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen.
-                        Manchmal
-                        benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen.
+                        Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen.
                     </p>
                     <p>
-                        Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«. Sehr
-                        bekannt
-                        ist
-                        dieser: The quick brown fox jumps over the lazy old dog. Oft werden in Typoblindtexte auch
-                        fremdsprachige
-                        Satzteile eingebaut (AVAIL® and Wefox™ are testing aussi la Kerning), um die Wirkung in anderen
-                        Sprachen
-                        zu
-                        testen. In Lateinisch sieht zum Beispiel fast jede Schrift gut aus.
+                        Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«. Sehr bekannt ist dieser: The quick brown fox jumps over the lazy old dog. Oft werden in Typoblindtexte auch fremdsprachige Satzteile eingebaut (AVAIL® and Wefox™ are testing aussi la Kerning), um die Wirkung in anderen Sprachen zu testen. In Lateinisch sieht zum Beispiel fast jede Schrift gut aus.
                     </p>
                 </section>
             </main>
