@@ -21,7 +21,7 @@ Das Attribut lang="de" bedeutet: Die Sprache der Seite ist Deutsch.
     -->
     <head>
 
-        <!--Version: 1.0.1-->
+        <!--Version: 1.0.2-->
         <!--
         <meta charset="UTF-8"> legt die Zeichencodierung fest. UTF-8 ist ein Standard,
         der fast alle Zeichen der Welt darstellen kann (Umlaute, Sonderzeichen, etc.)
@@ -45,43 +45,110 @@ Das Attribut lang="de" bedeutet: Die Sprache der Seite ist Deutsch.
     -->
     <body>
         <!--
-        <div> ist ein Container-Element ohne besondere Bedeutung. Es wird oft benutzt,
-        um Inhalte zu gruppieren und mit CSS zu gestalten.
-        Das "class" Attribut gibt dem Element einen Namen für CSS-Styling.
-        Das "role" Attribut hilft Screenreadern, die Funktion zu verstehen.
+        <header> ist ein semantisches HTML5-Element für den Kopfbereich der Seite.
+        Es ist aussagekräftiger als ein einfaches <div> und hilft Suchmaschinen
+        und Screenreadern, die Struktur zu verstehen.
         -->
-        <div class="header" role="header">
+        <header class="main-header">
             <!--
             <h1> ist eine Überschrift der höchsten Ebene ("Heading 1").
             Überschriften helfen, den Inhalt zu strukturieren.
             -->
             <h1>Hallo Welt!</h1>
-        </div>
+        </header>
 
         <!--
-        Noch ein <div> Container, um den Hauptinhalt zu gruppieren.
+        <div> Container mit der Klasse "wrapper" um den Hauptinhalt zu gruppieren.
         "wrapper" ist ein häufig verwendeter CSS-Klassenname für Container.
         -->
         <div class="wrapper">
             <!--
-            <p> steht für "Paragraph" (Absatz). Jeder <p>-Tag erzeugt einen Textblock
-            mit automatischen Abständen vor und nach dem Text.
+            <main> ist ein semantisches HTML5-Element für den Hauptinhalt der Seite.
+            Es sollte nur einmal pro Seite verwendet werden und enthält den wichtigsten Inhalt.
             -->
-            <p>
-                Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal
-                benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen.
-            </p>
+            <main>
+                <!--
+                <h2> ist eine Überschrift der zweiten Ebene ("Heading 2").
+                Die Überschriften-Hierarchie sollte logisch aufgebaut sein: h1, h2, h3, etc.
+                -->
+                <h2>Hauptinhalt der Seite</h2>
+                <!--
+                <section> ist ein semantisches HTML5-Element für thematisch zusammengehörige Inhalte.
+                Es strukturiert den Inhalt in logische Abschnitte.
+                -->
+                <section>
+                    <!--
+                    <h3> ist eine Überschrift der dritten Ebene ("Heading 3").
+                    Sie ist eine Unterüberschrift zu h2.
+                    -->
+                    <h3>Dies ist ein Abschnitt (engl: section)</h3>
+                    <!--
+                    <p> steht für "Paragraph" (Absatz). Jeder <p>-Tag erzeugt einen Textblock
+                    mit automatischen Abständen vor und nach dem Text.
+                    -->
+                    <p>
+                        Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen.
+                        Manchmal
+                        benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen.
+                    </p>
+                    <p>
+                        Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«. Sehr
+                        bekannt
+                        ist
+                        dieser: The quick brown fox jumps over the lazy old dog. Oft werden in Typoblindtexte auch
+                        fremdsprachige
+                        Satzteile eingebaut (AVAIL® and Wefox™ are testing aussi la Kerning), um die Wirkung in anderen
+                        Sprachen
+                        zu
+                        testen. In Lateinisch sieht zum Beispiel fast jede Schrift gut aus.
+                    </p>
+                </section>
+
+                <!--
+                Eine zweite <section> für einen weiteren thematischen Abschnitt.
+                Sections können mehrfach verwendet werden.
+                -->
+                <section>
+                    <h3>Dies ist ein Abschnitt (engl: section)</h3>
+                    <p>
+                        Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen.
+                        Manchmal
+                        benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen.
+                    </p>
+                    <p>
+                        Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«. Sehr
+                        bekannt
+                        ist
+                        dieser: The quick brown fox jumps over the lazy old dog. Oft werden in Typoblindtexte auch
+                        fremdsprachige
+                        Satzteile eingebaut (AVAIL® and Wefox™ are testing aussi la Kerning), um die Wirkung in anderen
+                        Sprachen
+                        zu
+                        testen. In Lateinisch sieht zum Beispiel fast jede Schrift gut aus.
+                    </p>
+                </section>
+            </main>
             <!--
-            Ein zweiter Absatz. Mehrere <p>-Elemente werden automatisch mit Abstand voneinander angezeigt.
+            <aside> ist ein semantisches HTML5-Element für Inhalte, die neben dem Hauptinhalt stehen.
+            Typisch für Seitenleisten, zusätzliche Informationen oder verwandte Links.
             -->
-            <p>
-                Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«. Sehr bekannt
-                ist
-                dieser: The quick brown fox jumps over the lazy old dog. Oft werden in Typoblindtexte auch fremdsprachige
-                Satzteile eingebaut (AVAIL® and Wefox™ are testing aussi la Kerning), um die Wirkung in anderen Sprachen zu
-                testen. In Lateinisch sieht zum Beispiel fast jede Schrift gut aus.
-            </p>
+            <aside>
+                <h2>Weitere Informationen</h2>
+                <p>Hier könnten zusätzliche Informationen oder Links platziert werden.</p>
+            </aside>
         </div>
+
+        <!--
+        <footer> ist ein semantisches HTML5-Element für den Fußbereich der Seite.
+        Hier stehen oft Copyright-Hinweise, Links oder Kontaktinformationen.
+        -->
+        <footer class="main-footer">
+            <!--
+            &copy; ist ein HTML-Entity für das Copyright-Symbol ©.
+            HTML-Entities sind spezielle Codes für Sonderzeichen.
+            -->
+            <p>&copy; 2025 Enno Hyttrek</p>
+        </footer>
 
     </body>
 

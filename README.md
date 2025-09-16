@@ -3,9 +3,10 @@ Für Kurse in der Weiterbildung und Umschulung
 <a href="https://ehy-classroom.github.io/ind-html-css-basics-2025/" target="_blank">https://ehy-classroom.github.io/ind-html-css-basics-2025/</a>
 
 
-Version: 1.0.1
 
-Autor: Enno Hyttrek, [ehy.training@gmail.com](mailto:ehy.training@gmail.com)
+Version: 1.0.2
+
+Autor: Enno Hyttrek, <a href="mailto:ehy.training@gmail.com" target="_blank">ehy.training@gmail.com</a>
 
 
 ## Was bedeutet HTML? 
@@ -36,7 +37,7 @@ Im Beispiel ist `href` ein Attribut, das das Ziel des Links angibt.
 
 Die Datei `index.html` ist die Startseite einer Webseite. Wenn man einen Ordner im Browser aufruft, wird automatisch die `index.html` angezeigt. Sie ist der Einstiegspunkt für Besucher.
 
-## Beschreibung der Übungsdatei index.html (Version 1.0.0)
+## Beschreibung der Übungsdatei index.html (Version 1.0.2)
 
 In der Übungsdatei `index.html` wurde eine minimale HTML-Struktur erstellt:
 
@@ -51,7 +52,7 @@ In der Übungsdatei `index.html` wurde eine minimale HTML-Struktur erstellt:
 3. Titel und Überschrift ergänzen
 4. Datei speichern und im Browser testen
 
-**Version 1.0.0** steht für die erste, einfache Version der Datei.
+**Version 1.0.2** steht für die aktuelle Version der Datei mit erweiterten Inhalten.
 
 ## Kommentar zur kommentierten Version
 
