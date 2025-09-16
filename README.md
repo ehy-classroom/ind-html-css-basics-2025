@@ -1,6 +1,6 @@
 # HTML/CSS Grundlagen 2025
 Für Kurse in der Weiterbildung und Umschulung  
-https://ehy-classroom.github.io/ind-html-css-basics-2025/
+<a href="https://ehy-classroom.github.io/ind-html-css-basics-2025/" target="_blank">https://ehy-classroom.github.io/ind-html-css-basics-2025/</a>
 
 
 Version: 1.0.0
