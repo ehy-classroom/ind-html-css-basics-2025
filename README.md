@@ -1,10 +1,11 @@
 # HTML/CSS Grundlagen 2025
 Für Kurse in der Weiterbilung und Umschulung
+https://ehy-classroom.github.io/ind-html-css-basics-2025/
 
 
 Version: 1.0.0
 
-Autor: Enno Hyttrek, ehy.training@gmail.com
+Autor: Enno Hyttrek, [ehy.training@gmail.com](mailto:ehy.training@gmail.com)
 
 
 ## Was bedeutet HTML?
