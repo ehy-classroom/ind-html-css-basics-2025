@@ -69,7 +69,7 @@ HTML5 bietet semantische Elemente, die die Bedeutung und Struktur einer Webseite
 <a href="https://example.com" target="_blank">Link öffnet in neuem Tab</a>
 ```
 
-### Strukturierte Navigation (seit Version 1.0.4)
+### Strukturierte Navigation und Listen (seit Version 1.0.4)
 ```html
 <nav class="main-nav">
     <ul>
@@ -80,6 +80,8 @@ HTML5 bietet semantische Elemente, die die Bedeutung und Struktur einer Webseite
     </ul>
 </nav>
 ```
+- Navigation mit ungeordneter Liste (`<ul>`) für gleichwertige Menüpunkte
+- Zusätzlich geordnete Liste (`<ol>`) im `<aside>`-Bereich für nummerierte Aufzählungen
 
 ### CSS-Styling (seit Version 1.0.5)
 ```css
@@ -90,7 +92,6 @@ body {
 ```
 - Externes CSS-Stylesheet (`style.css`) für das Styling hinzugefügt
 - Dunkles Theme mit HSL-Farbwerten implementiert
-- Kommentierte Version (`style-commented.css`) für Lernzwecke erstellt
 
 **Schritte zur Erstellung:**
 1. Neue Datei `index.html` anlegen
@@ -117,7 +118,7 @@ CSS kann auf drei verschiedene Arten in HTML-Dokumente eingebunden werden. Dabei
 - CSS-Regeln werden in einer separaten `.css`-Datei definiert
 - Wird über das `<link>`-Element im `<head>` eingebunden
 - Beste Praxis für größere Projekte und Wartbarkeit
-- **In diesem Projekt:** `style.css` und `style-commented.css`
+- **In diesem Projekt:** `style.css`
 
 #### 2. Internes Stylesheet (mittlere Priorität)
 ```html
@@ -147,9 +148,15 @@ Die CSS-Cascade bestimmt, welche Regel angewendet wird, wenn mehrere Regeln auf 
 
 Zusätzlich spielen **Spezifität** und **Reihenfolge** eine Rolle bei der Regel-Auswahl.
 
-## Kommentar zur kommentierten Version
+## Kommentar zu den kommentierten Dateien
 
-Es gibt zusätzlich eine Datei `index-commented.html`, in der alle Elemente ausführlich kommentiert sind. Sie dient ausschließlich zur Erklärung des Codes und ist eine ganz normale HTML-Datei – sie kann nicht mehr als Startseite (index.html) funktionieren, weil es im Webverzeichnis immer nur eine Datei mit dem Namen `index.html` geben kann. Nur diese wird beim Aufruf des Verzeichnisses automatisch angezeigt. Varianten wie `index2.html` oder `index3.html`, die man manchmal sieht, sind grundsätzlich sinnlos, da sie keine besondere Bedeutung für den Webserver haben und nicht automatisch geladen werden.
+Es gibt zusätzlich kommentierte Versionen der Dateien zur Erklärung:
+
+### `index-commented.html`
+Diese Datei enthält alle HTML-Elemente mit ausführlichen Kommentaren. Sie dient ausschließlich zur Erklärung des Codes und ist eine ganz normale HTML-Datei – sie kann nicht mehr als Startseite (index.html) funktionieren, weil es im Webverzeichnis immer nur eine Datei mit dem Namen `index.html` geben kann. Nur diese wird beim Aufruf des Verzeichnisses automatisch angezeigt. Varianten wie `index2.html` oder `index3.html`, die man manchmal sieht, sind grundsätzlich sinnlos, da sie keine besondere Bedeutung für den Webserver haben und nicht automatisch geladen werden.
+
+### `style-commented.css`
+Diese CSS-Datei enthält dieselben Styling-Regeln wie `style.css`, aber mit ausführlichen Kommentaren zu jedem CSS-Konzept. Sie dient nur zur Veranschaulichung und wird nicht in der HTML-Datei eingebunden. Für das tatsächliche Styling der Website wird ausschließlich `style.css` verwendet.
 
 ---
 
