@@ -1,0 +1,13 @@
+
+body {
+    background: hsl(200, 10%, 20%);
+    color: hsl(200, 10%, 100%);
+}
+
+a {
+    color: inherit;
+}
+
+main h3 {
+    color: hsl(200, 10%, 60%);
+}

@@ -1,0 +1,102 @@
+
+/*
+===============================================================================
+KOMMENTIERTE CSS-DATEI: style-commented.css (Version 1.0.4)
+===============================================================================
+
+Diese CSS-Datei enthält Styling-Regeln für die HTML-Grundlagen-Übung.
+Jede Regel ist ausführlich kommentiert, um die Funktionsweise zu erklären.
+
+Wichtig: Diese Datei wird über das <link>-Element im <head> der HTML-Datei
+eingebunden und stellt ein "externes Stylesheet" dar.
+*/
+
+/*
+===============================================================================
+GLOBALE STYLES FÜR DEN BODY
+===============================================================================
+
+Der body-Selector wirkt auf das gesamte sichtbare Dokument.
+Alle Eigenschaften werden an Kindelemente vererbt, sofern diese
+sie nicht überschreiben.
+*/
+body {
+    /* 
+    background: Hintergrundfarbe des gesamten Dokuments
+    hsl(200, 10%, 20%) bedeutet:
+    - 200 = Farbton (Hue): Blau-Bereich
+    - 10% = Sättigung (Saturation): Sehr gering gesättigt, fast grau
+    - 20% = Helligkeit (Lightness): Sehr dunkel
+    Resultat: Dunkelgrauer, leicht bläulicher Hintergrund
+    */
+    background: hsl(200, 10%, 20%);
+    
+    /* 
+    color: Textfarbe für das gesamte Dokument
+    hsl(200, 10%, 100%) = Gleicher Farbton und Sättigung wie background,
+    aber 100% Helligkeit = Weiß
+    Diese Farbkombination ergibt einen dunklen Hintergrund mit weißer Schrift
+    */
+    color: hsl(200, 10%, 100%);
+}
+
+/*
+===============================================================================
+LINK-STYLES
+===============================================================================
+
+Standardmäßig haben Links (<a>-Elemente) eine blaue Farbe und sind unterstrichen.
+Hier überschreiben wir das Styling.
+*/
+a {
+    /* 
+    color: inherit; bedeutet "erbe die Farbe vom Elternelement"
+    Da der body weiße Schrift hat, werden auch die Links weiß
+    anstatt der Standard-Linkfarbe (normalerweise blau)
+    */
+    color: inherit;
+}
+
+/*
+===============================================================================
+ÜBERSCHRIFTEN IM MAIN-BEREICH
+===============================================================================
+
+Spezifische Regel nur für <h3>-Überschriften, die innerhalb eines <main>-Elements stehen.
+Dies ist ein Beispiel für einen "Kontextuellen Selektor" oder "Descendant Selector".
+*/
+main h3 {
+    /* 
+    Etwas hellere Farbe für h3-Überschriften im main-Bereich
+    hsl(200, 10%, 60%) = Gleicher Farbton, aber 60% Helligkeit
+    Das ergibt ein mittleres Grau, heller als der Hintergrund,
+    aber dunkler als der normale Text
+    */
+    color: hsl(200, 10%, 60%);
+}
+
+/*
+===============================================================================
+HINWEISE ZUR CSS-CASCADE UND SPEZIFITÄT
+===============================================================================
+
+1. EXTERNE STYLESHEETS (wie diese Datei):
+   - Werden über <link> im <head> eingebunden
+   - Niedrigste Priorität in der Cascade
+
+2. INTERNE STYLESHEETS (im <head> mit <style>):
+   - Höhere Priorität als externe Stylesheets
+   - In unserer HTML-Datei gibt es einen leeren <style>-Container
+
+3. INLINE-STYLES (direkt im HTML mit style="..."):
+   - Höchste Priorität
+   - Werden in diesem Projekt bewusst NICHT verwendet
+
+4. SPEZIFITÄT:
+   - "main h3" ist spezifischer als nur "h3"
+   - Je spezifischer ein Selektor, desto höher seine Priorität
+
+5. VERERBUNG:
+   - Eigenschaften wie 'color' werden von Eltern- an Kindelemente vererbt
+   - 'inherit' nutzt diese Vererbung explizit
+*/

@@ -21,7 +21,7 @@ Das Attribut lang="de" bedeutet: Die Sprache der Seite ist Deutsch.
     -->
     <head>
 
-        <!--Version: 1.0.4-->
+        <!--Version: 1.0.5-->
         <!--
         <meta charset="UTF-8"> legt die Zeichencodierung fest. UTF-8 ist ein Standard,
         der fast alle Zeichen der Welt darstellen kann (Umlaute, Sonderzeichen, etc.)
@@ -56,6 +56,53 @@ Das Attribut lang="de" bedeutet: Die Sprache der Seite ist Deutsch.
             -->
             <h1>Hallo Welt!</h1>
         </header>
+
+        <!--
+        <nav> ist ein semantisches HTML5-Element für Navigationsbereiche.
+        Es kennzeichnet Links und Menüs, die zur Navigation durch die Website dienen.
+        Die CSS-Klasse "main-nav" wird für das Styling verwendet.
+        -->
+        <nav class="main-nav">
+            <!--
+            <ul> ist eine ungeordnete Liste (unordered list).
+            Sie ist semantisch korrekt für Navigationsmenüs, da jeder Link
+            gleichwertig ist und keine bestimmte Reihenfolge hat.
+            -->
+            <ul>
+                <!--
+                <li> ist ein Listenelement (list item).
+                Jeder Navigationspunkt wird in ein <li> eingeschlossen.
+                -->
+                <li>
+                    <!--
+                    <a href="#"> ist ein Link. Das # bedeutet "aktuelle Seite".
+                    Für die Startseite ist das eine übliche Praxis.
+                    -->
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <!--
+                    <a href="#section-01"> ist ein Anker-Link zu einem Element mit der ID "section-01".
+                    Solche Links springen zu bestimmten Bereichen derselben Seite.
+                    -->
+                    <a href="#section-01">Abschnitt 1</a>
+                </li>
+                <li>
+                    <!--
+                    Weitere Anker-Links zu anderen Bereichen der Seite.
+                    Diese Art der Navigation verbessert die Benutzererfahrung.
+                    -->
+                    <a href="#section-02">Abschnitt 2</a>
+                </li>
+                <li>
+                    <!--
+                    Link zum Footer der Seite. Praktisch bei langen Seiten,
+                    um schnell zum Ende zu springen.
+                    -->
+                    <a href="#main-footer">Footer</a>
+                </li>
+            </ul>
+        </nav>
 
         <!--
         <div> Container mit der Klasse "wrapper" um den Hauptinhalt zu gruppieren.
