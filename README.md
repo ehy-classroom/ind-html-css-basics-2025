@@ -4,7 +4,7 @@ Für Kurse in der Weiterbildung und Umschulung
 
 
 
-Version: 1.0.3
+Version: 1.0.4
 
 Autor: Enno Hyttrek, <a href="mailto:ehy.training@gmail.com" target="_blank">ehy.training@gmail.com</a>
 
@@ -37,7 +37,7 @@ Im Beispiel ist `href` ein Attribut, das das Ziel des Links angibt.
 
 Die Datei `index.html` ist die Startseite einer Webseite. Wenn man einen Ordner im Browser aufruft, wird automatisch die `index.html` angezeigt. Sie ist der Einstiegspunkt für Besucher.
 
-## Beschreibung der Übungsdatei index.html (Version 1.0.3)
+## Beschreibung der Übungsdatei index.html (Version 1.0.4)
 
 In der Übungsdatei `index.html` wurde eine HTML-Struktur mit semantischen Elementen erstellt:
 
@@ -69,6 +69,18 @@ HTML5 bietet semantische Elemente, die die Bedeutung und Struktur einer Webseite
 <a href="https://example.com" target="_blank">Link öffnet in neuem Tab</a>
 ```
 
+### Strukturierte Navigation (seit Version 1.0.4)
+```html
+<nav class="main-nav">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#section-01">Abschnitt 1</a></li>
+        <li><a href="#section-02">Abschnitt 2</a></li>
+        <li><a href="#main-footer">Footer</a></li>
+    </ul>
+</nav>
+```
+
 **Schritte zur Erstellung:**
 1. Neue Datei `index.html` anlegen
 2. Grundstruktur mit `<!DOCTYPE html>`, `<html>`, `<head>`, `<body>` schreiben
@@ -78,7 +90,7 @@ HTML5 bietet semantische Elemente, die die Bedeutung und Struktur einer Webseite
 6. Links mit passenden Attributen versehen
 7. Datei speichern und im Browser testen
 
-**Version 1.0.3** steht für die aktuelle Version der Datei mit semantischen HTML5-Elementen, Bildern und erweiterten Inhalten.
+**Version 1.0.4** steht für die aktuelle Version der Datei mit semantischen HTML5-Elementen, Bildern, erweiterten Inhalten und strukturierter Navigation mit ungeordneten Listen.
 
 ## Kommentar zur kommentierten Version
 
