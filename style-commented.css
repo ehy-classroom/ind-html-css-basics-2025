@@ -1,44 +1,291 @@
 
 /*
 ===============================================================================
-KOMMENTIERTE CSS-DATEI: style-commented.css (Version 1.0.4)
+KOMMENTIERTE CSS-DATEI: style-commented.css (Version 1.0.6)
 ===============================================================================
 
 Diese CSS-Datei enthält Styling-Regeln für die HTML-Grundlagen-Übung.
 Jede Regel ist ausführlich kommentiert, um die Funktionsweise zu erklären.
 
-Wichtig: Diese Datei wird über das <link>-Element im <head> der HTML-Datei
-eingebunden und stellt ein "externes Stylesheet" dar.
+Wichtig: Diese Datei dient nur zur Veranschaulichung und wird NICHT in der
+HTML-Datei eingebunden. Das aktive Stylesheet ist style.css.
+
+Diese Version entspricht der Struktur von style.css Version 1.0.6 mit:
+- CSS Reset für einheitliche Browser-Darstellung
+- Strukturiertem Layout mit Containern
+- Farbschema mit HSL-Werten
+- Responsive Design Vorbereitung
+*/
+
 */
 
 /*
 ===============================================================================
-GLOBALE STYLES FÜR DEN BODY
+RESET - BROWSER-STANDARD ZURÜCKSETZEN
 ===============================================================================
 
-Der body-Selector wirkt auf das gesamte sichtbare Dokument.
-Alle Eigenschaften werden an Kindelemente vererbt, sofern diese
-sie nicht überschreiben.
+CSS Reset normalisiert das unterschiedliche Standard-Styling verschiedener Browser.
+Ohne Reset können Abstände, Schriftarten und andere Eigenschaften in verschiedenen
+Browsern unterschiedlich aussehen.
+*/
+
+/* 
+Universal-Selektor (*) mit Pseudo-Elementen
+Wirkt auf ALLE HTML-Elemente sowie ::before und ::after Pseudo-Elemente
+*/
+*::before, *::after, * {
+    /* 
+    margin: 0; entfernt alle Standard-Außenabstände
+    padding: 0; entfernt alle Standard-Innenabstände
+    Browser haben unterschiedliche Standard-Abstände für Überschriften, Absätze etc.
+    */
+    margin: 0;
+    padding: 0;
+    
+    /*
+    box-sizing: border-box; ändert das Box-Model
+    Standard: width/height beziehen sich nur auf den Inhalt
+    border-box: width/height beziehen border und padding mit ein
+    Macht Berechnungen viel einfacher und vorhersagbarer
+    */
+    box-sizing: border-box;
+}
+
+/* 
+Navigationslisten: Entfernt die Standard-Aufzählungszeichen (Punkte/Zahlen)
+nav ul: Alle <ul> innerhalb von <nav>-Elementen
+*/
+nav ul {
+    list-style-type: none;
+}
+
+/* 
+Links: Entfernt Standard-Styling
+text-decoration: none; = Keine Unterstreichung
+color: inherit; = Erbt die Textfarbe vom Elternelement
+*/
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*
+===============================================================================
+LAYOUT - STRUKTUR UND ABSTÄNDE
+===============================================================================
+
+Layout-Regeln definieren die grundlegende Struktur der Seite:
+Abstände, Container-Größen, Mindesthöhen etc.
+*/
+
+/*
+Konsistente Abstände für alle Hauptinhaltselemente
+Verhindert, dass Texte und Bilder direkt aneinander kleben
+*/
+h1,h2,h3,h4,h5,h6,p,ol,ul,figure {
+    /* 
+    margin-bottom: 1rem; 
+    1rem = 1x die Schriftgröße des root-Elements (meist 16px)
+    rem ist besser als px, da es sich der Benutzer-Schriftgröße anpasst
+    */
+    margin-bottom: 1rem;
+}
+
+/*
+Container-Klassen für zentrierte, begrenzte Inhaltsbreite
+Verhindert, dass Inhalte auf sehr breiten Bildschirmen zu weit auseinandergezogen werden
+*/
+.main-nav > ul,
+.container {
+    /* 
+    padding: 1rem 20px; = Oben/Unten 1rem, Links/Rechts 20px
+    Sorgt für Abstand zu den Bildschirmrändern
+    */
+    padding: 1rem 20px;
+    
+    /* 
+    max-width: 75rem; = Maximale Breite von 75rem (ca. 1200px)
+    Verhindert zu breite Inhalte auf großen Bildschirmen
+    */
+    max-width: 75rem;
+    
+    /* 
+    margin: 0 auto; = Oben/Unten 0, Links/Rechts automatisch
+    "auto" zentriert den Container horizontal
+    */
+    margin: 0 auto;
+}
+
+/*
+Mindesthöhen definieren die Grundstruktur der Seite
+Verhindert, dass Bereiche zu klein werden, auch bei wenig Inhalt
+*/
+.main-header {
+    /* min-height: 10rem; = Mindestens 10rem hoch */
+    min-height: 10rem;
+}
+
+.wrapper-main-aside {
+    /* 
+    min-height: 70vh; 
+    70vh = 70% der Viewport-Höhe (sichtbare Bildschirmhöhe)
+    vh = Viewport Height, responsive Einheit
+    */
+    min-height: 70vh;
+}
+
+.main-footer {
+    /* min-height: 20vh; = Mindestens 20% der Bildschirmhöhe */
+    min-height: 20vh;
+}
+
+/*
+===============================================================================
+NAVIGATION - MENÜ-LAYOUT
+===============================================================================
+
+Spezielle Layout-Regeln für die Navigation
+*/
+
+/*
+Flexbox-Layout für Navigationsmenüs
+Zeigt Menüpunkte nebeneinander statt untereinander an
+*/
+nav.navbar > ul {
+    /* 
+    display: flex; aktiviert Flexbox-Layout
+    Kindelemente werden automatisch nebeneinander angeordnet
+    */
+    display: flex;
+    
+    /* 
+    gap: 1rem; = Abstand zwischen den Flex-Items
+    Modernere Alternative zu margin-right auf jedem Element
+    */
+    gap: 1rem;
+}
+
+/*
+===============================================================================
+TYPOGRAPHY - SCHRIFT UND TEXT-LAYOUT
+===============================================================================
+
+Regeln für die Darstellung und Anordnung von Textelementen
+*/
+
+/* Aktuell leer - Platz für spezifische Typografie-Regeln */
+
+/*
+===============================================================================
+COLOR & STYLE - FARBEN UND VISUELLE GESTALTUNG
+===============================================================================
+
+Farbschema und visuelle Eigenschaften der verschiedenen Seitenbereiche
+*/
+
+/* 
+Grundfarben für den gesamten Körper der Seite
 */
 body {
     /* 
-    background: Hintergrundfarbe des gesamten Dokuments
-    hsl(200, 10%, 20%) bedeutet:
-    - 200 = Farbton (Hue): Blau-Bereich
-    - 10% = Sättigung (Saturation): Sehr gering gesättigt, fast grau
-    - 20% = Helligkeit (Lightness): Sehr dunkel
-    Resultat: Dunkelgrauer, leicht bläulicher Hintergrund
+    background: hsl(200, 10%, 20%);
+    HSL = Hue (Farbton), Saturation (Sättigung), Lightness (Helligkeit)
+    200 = Blau-Bereich, 10% = Sehr gering gesättigt, 20% = Sehr dunkel
     */
     background: hsl(200, 10%, 20%);
     
     /* 
-    color: Textfarbe für das gesamte Dokument
-    hsl(200, 10%, 100%) = Gleicher Farbton und Sättigung wie background,
-    aber 100% Helligkeit = Weiß
-    Diese Farbkombination ergibt einen dunklen Hintergrund mit weißer Schrift
+    color: hsl(200, 10%, 100%);
+    100% Helligkeit = Weiß, gleicher Farbton wie Hintergrund
     */
     color: hsl(200, 10%, 100%);
 }
+
+/* 
+Header-Bereich: Leicht heller als der Body-Hintergrund
+*/
+.main-header {
+    /* hsl(200, 10%, 30%) = 10% heller als der Body */
+    background: hsl(200, 10%, 30%);
+}
+
+/* 
+Hauptinhalt: Weißer Hintergrund mit dunkler Schrift für bessere Lesbarkeit
+*/
+.wrapper-main-aside {
+    /* #fff = Weiß (Hexadezimal-Notation) */
+    background: #fff;
+    /* hsl(200, 10%, 10%) = Sehr dunkle Schrift */
+    color: hsl(200, 10%, 10%);
+}
+
+/* 
+Footer: Gleiche Farbe wie Header für visuellen Zusammenhalt
+*/
+.main-footer {
+    background: hsl(200, 10%, 30%);
+}
+
+/*
+===============================================================================
+COMPONENTS - WIEDERVERWENDBARE KOMPONENTEN
+===============================================================================
+
+Styling für spezielle Komponenten und UI-Elemente
+*/
+
+/* Aktuell leer - Platz für Button-Styles, Cards, etc. */
+
+/*
+===============================================================================
+RESPONSIVE DESIGN - ANPASSUNG AN VERSCHIEDENE BILDSCHIRMGRÖSSEN
+===============================================================================
+
+Media Queries und responsive Layout-Anpassungen
+*/
+
+/* Aktuell leer - Platz für @media-Regeln für Tablets und Smartphones */
+
+/*
+===============================================================================
+DEV OVERRIDES - ENTWICKLUNGSHILFEN
+===============================================================================
+
+Temporäre Styles für Entwicklung und Debugging
+*/
+
+/* Aktuell leer - Platz für temporäre Entwicklungshilfen */
+
+/*
+===============================================================================
+WICHTIGE CSS-KONZEPTE IN DIESEM STYLESHEET
+===============================================================================
+
+1. CSS RESET:
+   - Normalisiert Browser-Unterschiede
+   - box-sizing: border-box macht Berechnungen einfacher
+
+2. MOBILE-FIRST DESIGN:
+   - Basis-Styles für mobile Geräte
+   - Erweiterungen via Media Queries für größere Bildschirme
+
+3. EINHEITEN:
+   - rem: Relativ zur root-Schriftgröße (skalierbar)
+   - vh/vw: Viewport-relative Einheiten (responsive)
+   - px: Absolute Einheiten (für präzise Kontrolle)
+
+4. FARBSCHEMA:
+   - HSL für intuitive Farbmanipulation
+   - Konsistente Farbtöne mit verschiedenen Helligkeitsstufen
+
+5. FLEXBOX:
+   - Moderne Layout-Methode
+   - Automatische Verteilung und Ausrichtung
+
+6. CSS-ORGANISATION:
+   - Logische Gruppierung nach Funktion
+   - Kommentare für bessere Wartbarkeit
+*/
 
 /*
 ===============================================================================

@@ -4,7 +4,7 @@ Für Kurse in der Weiterbildung und Umschulung
 
 
 
-Version: 1.0.5
+Version: 1.0.6
 
 Autor: Enno Hyttrek, <a href="mailto:ehy.training@gmail.com" target="_blank">ehy.training@gmail.com</a>
 
@@ -37,9 +37,9 @@ Im Beispiel ist `href` ein Attribut, das das Ziel des Links angibt.
 
 Die Datei `index.html` ist die Startseite einer Webseite. Wenn man einen Ordner im Browser aufruft, wird automatisch die `index.html` angezeigt. Sie ist der Einstiegspunkt für Besucher.
 
-## Beschreibung der Übungsdatei index.html (Version 1.0.5)
+## Beschreibung der Übungsdatei index.html (Version 1.0.6)
 
-In der Übungsdatei `index.html` wurde eine HTML-Struktur mit semantischen Elementen erstellt:
+In der Übungsdatei `index.html` wurde eine HTML-Struktur mit semantischen Elementen und erweiterten CSS-Styling erstellt:
 
 ### Grundstruktur (seit Version 1.0.1)
 - Die Datei beginnt mit der Deklaration `<!DOCTYPE html>` für HTML5
@@ -93,6 +93,34 @@ body {
 - Externes CSS-Stylesheet (`style.css`) für das Styling hinzugefügt
 - Dunkles Theme mit HSL-Farbwerten implementiert
 
+### Erweiterte CSS-Architektur (seit Version 1.0.6)
+```css
+/*---------------------
+RESET
+---------------------*/
+*::before, *::after, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*---------------------
+LAYOUT
+---------------------*/
+.container {
+    padding: 1rem 20px;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+```
+- **CSS Reset**: Normalisiert Browser-Unterschiede mit Universal-Selektor
+- **Container-System**: Zentrierte, begrenzte Inhaltsbreite für bessere Lesbarkeit
+- **Strukturierte CSS-Organisation**: Logische Gruppierung (Reset, Layout, Colors, etc.)
+- **Flexbox-Navigation**: `display: flex` für horizontale Menüanordnung
+- **HSL-Farbschema**: Konsistente Farbpalette mit verschiedenen Helligkeitsstufen
+- **Responsive Design Vorbereitung**: Viewport-relative Einheiten (vh, vw)
+- **Box-Model Optimierung**: `box-sizing: border-box` für einfachere Berechnungen
+
 **Schritte zur Erstellung:**
 1. Neue Datei `index.html` anlegen
 2. Grundstruktur mit `<!DOCTYPE html>`, `<html>`, `<head>`, `<body>` schreiben
@@ -102,8 +130,9 @@ body {
 6. Links mit passenden Attributen versehen
 7. Datei speichern und im Browser testen
 8. CSS-Stylesheet hinzufügen für Styling
+9. CSS-Architektur mit Reset, Layout-System und strukturierter Organisation erweitern
 
-**Version 1.0.5** steht für die aktuelle Version der Datei mit semantischen HTML5-Elementen, Bildern, erweiterten Inhalten, strukturierter Navigation mit ungeordneten Listen und CSS-Styling für ein dunkles Theme.
+**Version 1.0.6** steht für die aktuelle Version mit semantischen HTML5-Elementen, Bildern, strukturierter Navigation, professioneller CSS-Architektur mit Reset, Container-System, Flexbox-Layout und strukturierter Code-Organisation.
 
 ## CSS-Integration und die Cascade
 

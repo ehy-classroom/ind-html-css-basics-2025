@@ -2,7 +2,7 @@
 <html lang="de">
 
 <head>
-    <!--Version: 1.0.5-->
+    <!--Version: 1.0.6-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML/CSS Grundlagen 2025</title>
@@ -15,10 +15,13 @@
 
 <body>
     <header class="main-header">
-        <h1>Hallo Welt!</h1>
+        <div class="container">
+            <h1>Hallo Welt!</h1>
+            <p>Eine Site von Enno Hyttrek</p>
+        </div>
     </header>
 
-    <nav class="main-nav">
+    <nav class="navbar main-nav">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#section-01">Abschnitt 1</a></li>
@@ -27,63 +30,86 @@
         </ul>
     </nav>
 
-    <div class="wrapper">
-        <main>
-            <h2>Hauptinhalt der Seite</h2>
+    <div class="wrapper wrapper-main-aside">
+        <div class="container">
 
-            <figure>
-                <img src="assets/img/berlin-77788_1920.jpg" width="100%" height="auto"
-                    alt="Eine Fotografie die einen Teil der Berliner Skyline am Alexanderplatz zeigt, vor allem den Fernsehturm und das Park Inn Hotel.">
-                <figcaption>Abbildung 1: Berliner Skyline am Alexanderplatz</figcaption>
-            </figure>
+            <main>
+                <h2>Hauptinhalt der Seite</h2>
 
-            <section id="section-01">
-                <h3>Dies ist ein Abschnitt (engl: section)</h3>
-                <p>
-                    Dies ist ein Typoblindtext. <a href="https://www.google.com/" target="_blank">Und dies ist ein Link
-                        zur Google Suchseite</a>. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie
-                    aussehen. Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu
-                    testen.
-                </p>
-                <p>
-                    Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«. Sehr
-                    bekannt ist dieser: The quick brown fox jumps over the lazy old dog. Oft werden in Typoblindtexte
-                    auch fremdsprachige Satzteile eingebaut (AVAIL® and Wefox™ are testing aussi la Kerning), um die
-                    Wirkung in anderen Sprachen zu testen. In Lateinisch sieht zum Beispiel fast jede Schrift gut aus.
-                </p>
-            </section>
+                <figure>
+                    <img src="assets/img/berlin-77788_1920.jpg" width="100%" height="auto"
+                        alt="Eine Fotografie die einen Teil der Berliner Skyline am Alexanderplatz zeigt, vor allem den Fernsehturm und das Park Inn Hotel.">
+                    <figcaption>Abbildung 1: Berliner Skyline am Alexanderplatz</figcaption>
+                </figure>
 
-            <section id="section-02">
-                <h3>Dies ist ein Abschnitt (engl: section)</h3>
-                <p>
-                    Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen.
-                    Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen.
-                </p>
-                <p>
-                    Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«. Sehr
-                    bekannt ist dieser: The quick brown fox jumps over the lazy old dog. Oft werden in Typoblindtexte
-                    auch fremdsprachige Satzteile eingebaut (AVAIL® and Wefox™ are testing aussi la Kerning), um die
-                    Wirkung in anderen Sprachen zu testen. In Lateinisch sieht zum Beispiel fast jede Schrift gut aus.
-                </p>
-            </section>
-        </main>
-        <aside>
-            <h2>Weitere Informationen</h2>
-            <p>Hier könnten zusätzliche Informationen oder Links platziert werden.</p>
-            <h3>Oder zum Beispiel eine Liste</h3>
-            <ol>
-                <li>Listeneintrag</li>
-                <li>Listeneintrag</li>
-                <li>Listeneintrag</li>
-                <li>Listeneintrag</li>
-                <li>Listeneintrag</li>
-                <li>Listeneintrag</li>
-            </ol>
-        </aside>
-    </div>
+                <section id="section-01">
+                    <h3>Dies ist ein Abschnitt (engl: section)</h3>
+                    <p>
+                        Dies ist ein Typoblindtext. <a href="https://www.google.com/" target="_blank">Und dies ist ein
+                            Link
+                            zur Google Suchseite</a>. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie
+                        aussehen. Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften
+                        zu
+                        testen.
+                    </p>
+                    <p>
+                        Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«.
+                        Sehr
+                        bekannt ist dieser: The quick brown fox jumps over the lazy old dog. Oft werden in
+                        Typoblindtexte
+                        auch fremdsprachige Satzteile eingebaut (AVAIL® and Wefox™ are testing aussi la Kerning), um die
+                        Wirkung in anderen Sprachen zu testen. In Lateinisch sieht zum Beispiel fast jede Schrift gut
+                        aus.
+                    </p>
+                </section>
+
+                <section id="section-02">
+                    <h3>Dies ist ein Abschnitt (engl: section)</h3>
+                    <p>
+                        Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie
+                        aussehen.
+                        Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu
+                        testen.
+                    </p>
+                    <p>
+                        Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«.
+                        Sehr
+                        bekannt ist dieser: The quick brown fox jumps over the lazy old dog. Oft werden in
+                        Typoblindtexte
+                        auch fremdsprachige Satzteile eingebaut (AVAIL® and Wefox™ are testing aussi la Kerning), um die
+                        Wirkung in anderen Sprachen zu testen. In Lateinisch sieht zum Beispiel fast jede Schrift gut
+                        aus.
+                    </p>
+                </section>
+            </main>
+            <aside>
+                <h2>Weitere Informationen</h2>
+                <p>Hier könnten zusätzliche Informationen oder Links platziert werden.</p>
+                <h3>Oder zum Beispiel eine Liste</h3>
+                <ol>
+                    <li>Listeneintrag</li>
+                    <li>Listeneintrag</li>
+                    <li>Listeneintrag</li>
+                    <li>Listeneintrag</li>
+                    <li>Listeneintrag</li>
+                    <li>Listeneintrag</li>
+                </ol>
+            </aside>
+        </div>
+    </div><!--.wrapper-->
 
     <footer id="main-footer" class="main-footer">
-        <p>&copy; 2025 Enno Hyttrek</p>
+        <div class="container">
+            <nav class="navbar footer-nav">
+                <ul>
+                    <li><a href="#">Impressum</a></li>
+                    <li><a href="#">Datenschutz</a></li>
+                    <li><a href="mailto:ehy.training@gmail.com">Webmaster</a></li>
+                </ul>
+            </nav>
+
+            <p>&copy; 2025 Enno Hyttrek</p>
+        </div>
     </footer>
 
 </body>

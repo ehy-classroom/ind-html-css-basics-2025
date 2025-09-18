@@ -21,7 +21,7 @@ Das Attribut lang="de" bedeutet: Die Sprache der Seite ist Deutsch.
     -->
     <head>
 
-        <!--Version: 1.0.5-->
+        <!--Version: 1.0.6-->
         <!--
         <meta charset="UTF-8"> legt die Zeichencodierung fest. UTF-8 ist ein Standard,
         der fast alle Zeichen der Welt darstellen kann (Umlaute, Sonderzeichen, etc.)
@@ -51,18 +51,30 @@ Das Attribut lang="de" bedeutet: Die Sprache der Seite ist Deutsch.
         -->
         <header class="main-header">
             <!--
-            <h1> ist eine Überschrift der höchsten Ebene ("Heading 1").
-            Überschriften helfen, den Inhalt zu strukturieren.
+            <div class="container"> ist ein Container für zentrierte, begrenzte Inhaltsbreite.
+            Die CSS-Klasse "container" sorgt für einheitliche Abstände und maximale Breite,
+            damit Inhalte auf sehr breiten Bildschirmen nicht zu weit auseinandergezogen werden.
             -->
-            <h1>Hallo Welt!</h1>
+            <div class="container">
+                <!--
+                <h1> ist eine Überschrift der höchsten Ebene ("Heading 1").
+                Überschriften helfen, den Inhalt zu strukturieren.
+                -->
+                <h1>Hallo Welt!</h1>
+                <!--
+                <p> ist ein Absatz (Paragraph). Zusätzliche Informationen zum Header.
+                -->
+                <p>Eine Site von Enno Hyttrek</p>
+            </div>
         </header>
 
         <!--
-        <nav> ist ein semantisches HTML5-Element für Navigationsbereiche.
+        <nav> ist ein semantisches HTML5-Element für Navigationsbereiche.  
         Es kennzeichnet Links und Menüs, die zur Navigation durch die Website dienen.
-        Die CSS-Klasse "main-nav" wird für das Styling verwendet.
+        "navbar" ist eine allgemeine Klasse für Navigationsleisten.
+        "main-nav" ist die spezifische Klasse für die Hauptnavigation.
         -->
-        <nav class="main-nav">
+        <nav class="navbar main-nav">
             <!--
             <ul> ist eine ungeordnete Liste (unordered list).
             Sie ist semantisch korrekt für Navigationsmenüs, da jeder Link
@@ -105,10 +117,16 @@ Das Attribut lang="de" bedeutet: Die Sprache der Seite ist Deutsch.
         </nav>
 
         <!--
-        <div> Container mit der Klasse "wrapper" um den Hauptinhalt zu gruppieren.
-        "wrapper" ist ein häufig verwendeter CSS-Klassenname für Container.
+        <div> Container mit mehreren CSS-Klassen für verschiedene Zwecke:
+        "wrapper" ist ein allgemeiner Container-Name
+        "wrapper-main-aside" ist spezifisch für den Bereich mit main und aside
         -->
-        <div class="wrapper">
+        <div class="wrapper wrapper-main-aside">
+            <!--
+            <div class="container"> - Wieder ein Container für zentrierte Inhalte,
+            sorgt für konsistente Abstände und maximale Breite auch in diesem Bereich.
+            -->
+            <div class="container">
             <!--
             <main> ist ein semantisches HTML5-Element für den Hauptinhalt der Seite.
             Es sollte nur einmal pro Seite verwendet werden und enthält den wichtigsten Inhalt.
@@ -183,21 +201,77 @@ Das Attribut lang="de" bedeutet: Die Sprache der Seite ist Deutsch.
             Typisch für Seitenleisten, zusätzliche Informationen oder verwandte Links.
             -->
             <aside>
+                <!--
+                <h2> ist eine Überschrift der zweiten Ebene für den aside-Bereich.
+                -->
                 <h2>Weitere Informationen</h2>
+                <!--
+                <p> ist ein Absatz mit erklärenden Informationen.
+                -->
                 <p>Hier könnten zusätzliche Informationen oder Links platziert werden.</p>
+                <!--
+                <h3> ist eine Überschrift der dritten Ebene.
+                -->
+                <h3>Oder zum Beispiel eine Liste</h3>
+                <!--
+                <ol> ist eine geordnete Liste (ordered list).
+                Im Gegensatz zu <ul> (unordered list) haben die Einträge eine Reihenfolge
+                und werden automatisch nummeriert (1., 2., 3., etc.).
+                -->
+                <ol>
+                    <!--
+                    <li> sind Listenelemente (list items).
+                    In einer <ol> werden sie automatisch durchnummeriert.
+                    -->
+                    <li>Listeneintrag</li>
+                    <li>Listeneintrag</li>
+                    <li>Listeneintrag</li>
+                    <li>Listeneintrag</li>
+                    <li>Listeneintrag</li>
+                    <li>Listeneintrag</li>
+                </ol>
             </aside>
-        </div>
+            </div>
+        </div><!--.wrapper-->
 
         <!--
         <footer> ist ein semantisches HTML5-Element für den Fußbereich der Seite.
         Hier stehen oft Copyright-Hinweise, Links oder Kontaktinformationen.
+        Das id-Attribut "main-footer" macht dieses Element als Anker-Ziel verfügbar.
         -->
-        <footer class="main-footer">
+        <footer id="main-footer" class="main-footer">
             <!--
-            &copy; ist ein HTML-Entity für das Copyright-Symbol ©.
-            HTML-Entities sind spezielle Codes für Sonderzeichen.
+            <div class="container"> - Container auch im Footer für konsistente Struktur.
             -->
-            <p>&copy; 2025 Enno Hyttrek</p>
+            <div class="container">
+                <!--
+                <nav class="navbar footer-nav"> - Navigationsbereich im Footer.
+                "navbar" ist die allgemeine Navigationsklasse,
+                "footer-nav" ist spezifisch für die Footer-Navigation.
+                -->
+                <nav class="navbar footer-nav">
+                    <!--
+                    <ul> - Ungeordnete Liste für Footer-Links.
+                    -->
+                    <ul>
+                        <!--
+                        <li> - Listenelemente mit verschiedenen Link-Typen:
+                        - Normale interne Links (#)
+                        - E-Mail-Links (mailto:)
+                        -->
+                        <li><a href="#">Impressum</a></li>
+                        <li><a href="#">Datenschutz</a></li>
+                        <li><a href="mailto:ehy.training@gmail.com">Webmaster</a></li>
+                    </ul>
+                </nav>
+
+                <!--
+                <p> - Copyright-Hinweis mit HTML-Entity für das ©-Symbol.
+                &copy; ist ein HTML-Entity für das Copyright-Symbol ©.
+                HTML-Entities sind spezielle Codes für Sonderzeichen.
+                -->
+                <p>&copy; 2025 Enno Hyttrek</p>
+            </div>
         </footer>
 
     </body>
